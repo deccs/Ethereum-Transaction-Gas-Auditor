@@ -1,0 +1,65 @@
+# --- Environment Variables ---
+.env*
+*.env
+
+# --- Secrets ---
+# Add specific secret file names if they MUST be in the project dir (ideally they aren't)
+# Example: bigquery-app-proj-*.json
+*.pem
+*.key
+
+# --- Python / Django ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.coverage
+htmlcov/
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles_collected/
+
+# --- Python Virtual Environments ---
+venv/
+env/
+ENV/
+.*/
+lib/
+lib64/
+include/
+scripts/
+Scripts/
+pip-log.txt
+pip-delete-this-directory.txt
+local_settings.py
+
+# --- Node.js / Frontend Build ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+/bk-app/dist/  # Assuming bk-app is your frontend source folder
+/bk-app/build/
+.npm
+.yarn*
+
+# --- OS generated files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# --- IDE directories ---
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
