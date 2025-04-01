@@ -4,7 +4,7 @@
 
 # --- Secrets ---
 # Add specific secret file names if they MUST be in the project dir (ideally they aren't)
-# Example: bigquery-app-proj-*.json
+bigquery-app-proj-*.json # Ignore Google Cloud JSON keys matching this pattern
 *.pem
 *.key
 
@@ -25,7 +25,8 @@ staticfiles_collected/
 venv/
 env/
 ENV/
-.*/
+.venv/ # Common alternative name
+*/ # General pattern, potentially too broad, use with caution
 lib/
 lib64/
 include/
@@ -45,6 +46,7 @@ pnpm-debug.log*
 /bk-app/build/
 .npm
 .yarn*
+lerna-debug.log*
 
 # --- OS generated files ---
 .DS_Store
@@ -63,3 +65,20 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# --- Package Manager ---
+*.lock # e.g., package-lock.json, yarn.lock, Pipfile.lock
+
+# --- Test Files (Optional, adjust if needed) ---
+# .pytest_cache/
+# .tox/
+# .nox/
+# nosetests.xml
+# coverage.xml
+# *.cover
+# *.py,cover
+# .hypothesis/
+
+# --- Other ---
+# *.bak
+# *.tmp
