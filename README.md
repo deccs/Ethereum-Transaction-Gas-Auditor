@@ -55,7 +55,7 @@ https://github.com/user-attachments/assets/0fa3a17c-c286-4b64-86fa-db26293d79f1
 
 - **GCP Account** with a project created
 - **BigQuery API** enabled for the project
-- **Blockchain Node Engine API** (or similar, depending on the specific RPC endpoint used) enabled for the project
+- **Blockchain RPC API** enabled for the project
 - **Service Account** with permissions:
   - BigQuery Data Editor (`roles/bigquery.dataEditor`)
   - BigQuery Metadata Viewer (`roles/bigquery.metadataViewer`)
@@ -65,8 +65,8 @@ https://github.com/user-attachments/assets/0fa3a17c-c286-4b64-86fa-db26293d79f1
 
 ### Google Cloud Blockchain RPC
 
-- This project uses **Google Cloud's Blockchain Node Engine** or similar RPC service. [See Google Cloud Docs](https://cloud.google.com/blockchain-node-engine/docs)
-- **Important:** Ensure your chosen RPC endpoint supports the `debug_traceTransaction` method. Public endpoints might have limitations. Consider using a dedicated node endpoint for full tracing capabilities.
+- This project is specifically designed to use **Google Cloud's Blockchain RPC** service. [See Google Cloud Docs](https://cloud.google.com/blockchain-rpc/docs/overview)
+- **Important:** Google Blockchain RPC supports the `debug_traceTransaction` method needed for this application's full functionality.
 
 ---
 
@@ -102,10 +102,9 @@ SERVICE_ACCOUNT_JSON="/path/to/your/secure/location/service-account-key.json"
 
 # Google Cloud Blockchain RPC Endpoint
 # Replace with your actual endpoint URL from GCP Blockchain Node Engine or other provider
-# Example using Blockchain Node Engine (requires project setup and maybe API Key):
-GCP_BLOCKCHAIN_RPC_ENDPOINT="https://YOUR_REGION-eth-mainnet.blockchainnodeengine.googlecloudapis.com/?key=YOUR_API_KEY"
-# Or a public endpoint (might have trace limitations):
-# GCP_BLOCKCHAIN_RPC_ENDPOINT="https://mainnet.infura.io/v3/YOUR_INFURA_PROJECT_ID"
+# Example using Blockchain RPC (requires project setup and maybe API Key):
+GCP_BLOCKCHAIN_RPC_ENDPOINT="https://YOUR_REGION-blockchainrpc.googleapis.com/?key=YOUR_API_KEY"
+# Note: This application is designed to work specifically with Google Blockchain RPC
 ```
 
 **Security Note:** Store your service-account-key.json file securely outside of your project directory and ensure the .env file is included in your .gitignore.
