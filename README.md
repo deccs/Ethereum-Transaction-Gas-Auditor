@@ -209,7 +209,6 @@ The React application should load. Enter a valid Ethereum transaction hash and c
 - **Interactive Visualizations:** Implement charts for gas usage breakdown per call frame and visual call flow diagrams.
 - **Better Error Handling:** Provide more specific user feedback for RPC errors, BigQuery issues, or parsing failures.
 - **User Accounts:** Allow users to save their analyses or track specific contracts.
-- **Containerization:** Add Docker configuration (Dockerfile, docker-compose.yml) for easier setup and deployment.
 
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
