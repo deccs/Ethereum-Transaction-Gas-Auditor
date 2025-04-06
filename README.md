@@ -4,7 +4,7 @@ A full-stack web application designed to analyze Ethereum transaction gas usage.
 
 <div align="center">
 
-![Screenshot](https://github.com/user-attachments/assets/c6672cf1-bc7c-4b08-aeeb-5186e6ffc966)
+![Screenshot](https://github.com/user-attachments/assets/330c2680-c4f9-4967-b395-8d4ebc34f216)
 
 
 
